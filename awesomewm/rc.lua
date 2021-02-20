@@ -18,7 +18,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
-local wall = require("wallpaper")
+-- local wall = require("wallpaper")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -47,7 +47,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -159,9 +159,9 @@ local function set_wallpaper(s)
         if type(wallpaper) == "function" then
             wallpaper = wallpaper(s)
         end
-        -- gears.wallpaper.maximized(wallpaper, s, true)
-        filename = wall.getImg()
-        gears.wallpaper.maximized(filename, s, true)
+        gears.wallpaper.maximized(wallpaper, s, true)
+        -- filename = wall.getImg()
+        -- gears.wallpaper.maximized(filename, s, true)
     end
 end
 
