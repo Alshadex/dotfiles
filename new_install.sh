@@ -6,5 +6,5 @@ sudo apt autoremove
 
 sudo snap refresh
 sudo snap install discord spotify
-sudo snap install --classic code
-
+sudo snap install code --classic 
+sudo snap install slack --classic
