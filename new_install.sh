@@ -8,3 +8,6 @@ sudo snap refresh
 sudo snap install discord spotify
 sudo snap install code --classic 
 sudo snap install slack --classic
+
+# Install oh-my-zsh
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
