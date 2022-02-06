@@ -6,8 +6,10 @@ sudo apt autoremove
 
 sudo snap refresh
 sudo snap install discord spotify
+sudo snap install vlc
 sudo snap install code --classic 
 sudo snap install slack --classic
+sudo snap remove firefox # snap firefox does not work with browserpass :/
 
 # Install oh-my-zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"

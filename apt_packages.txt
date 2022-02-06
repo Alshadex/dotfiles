@@ -6,3 +6,6 @@ python3-pip
 python3-venv
 zsh
 docker-compose
+pass
+webext-browserpass
+firefox
