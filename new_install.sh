@@ -15,3 +15,4 @@ sudo snap remove firefox # snap firefox does not work with browserpass :/
 
 # Install oh-my-zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
