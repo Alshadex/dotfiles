@@ -1,5 +1,10 @@
 require('plugins')
-require('lualine').setup()
+require('lualine').setup {
+    options = {
+        theme = 'powerline_dark'
+    }
+}
+require('nvim-tree').setup()
 
 -- Tab options.
 vim.bo.tabstop = 4
