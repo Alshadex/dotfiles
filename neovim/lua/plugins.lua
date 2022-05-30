@@ -19,6 +19,14 @@ return require('packer').startup(function()
 		requires = {'kyazdani42/nvim-web-devicons', -- optional, for file icon
 		},
 	}
+
+    -- use "lukas-reineke/lsp-format.nvim"
+
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	-- if packer_bootstrap then
