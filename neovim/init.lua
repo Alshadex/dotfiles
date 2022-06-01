@@ -2,6 +2,7 @@ require('plugins')
 require('lualine-config')
 require('nvim-tree-config') -- runs lua/nvim-tree-config/init.lua
 require('telescope-config')
+require('go-nvim-config')
 --require('lsp-format-config')
 
 
