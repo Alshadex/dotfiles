@@ -16,6 +16,8 @@ require'nvim-tree'.setup {
 	},
 }
 
+vim.keymap.set('n', '<F6>', ':NvimTreeToggle<cr>')
+
 
 -- Temporary function for nvim tree auto close.
 vim.api.nvim_create_autocmd("BufEnter", {
