@@ -9,6 +9,7 @@ require('nvim-treesitter-config')
 
 local set = vim.opt
 
+
 -- Tab options.
 set.tabstop = 4
 set.softtabstop = 4
