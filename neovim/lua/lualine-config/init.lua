@@ -3,3 +3,4 @@ require('lualine').setup {
         theme = 'powerline_dark'
     }
 }
+

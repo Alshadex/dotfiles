@@ -5,11 +5,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	vim.cmd [[packadd packer.nvim]]
 end
 
-local status_ok, packer = pcall(require, 'packer')
-if not status_ok then
-	return
-end
-
 return require('packer').startup(function(use)
 
 	use 'wbthomason/packer.nvim'
@@ -35,7 +30,7 @@ return require('packer').startup(function(use)
 
 	use {
 		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate'
+--		run = ':TSUpdate'
 	}
 
 	use 'ray-x/go.nvim'
