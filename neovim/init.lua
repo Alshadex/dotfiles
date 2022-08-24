@@ -1,22 +1,19 @@
-require('plugins')
-require('lualine-config')
-require('nvim-tree-config') -- runs lua/nvim-tree-config/init.lua
-require('telescope-config')
-require('go-nvim-config')
-require('nvim-treesitter-config')
---require('lsp-format-config')
+--[[
+Neovim init file
+Maintainer: Alex Lin
+--]]
 
+-- packer init
+require('packer-init')
 
-local set = vim.opt
+-- modules
+require('core/options')
+require('core/keymaps')
 
-
--- Tab options.
-set.tabstop = 4
-set.softtabstop = 4
-set.shiftwidth = 4
-set.expandtab = true
-
--- Enable line numbers and relative line numbers.
-set.number = true
--- set.relativenumber = false
+require('plugins/lualine-config')
+require('plugins/nvim-tree-config') -- runs lua/nvim-tree-config/init.lua
+require('plugins/telescope-config')
+require('plugins/go-nvim-config')
+require('plugins/nvim-treesitter-config')
+require('plugins/nvim-lspconfig')
 

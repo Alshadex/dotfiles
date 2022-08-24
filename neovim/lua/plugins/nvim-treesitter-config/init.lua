@@ -9,7 +9,8 @@ require'nvim-treesitter.configs'.setup {
         'vim',
         'solidity',
         'lua',
-        'html', 'css'
+        'html', 'css',
+        'hcl'
     },
     highlight = {
     enable = true,

@@ -9,7 +9,11 @@ return require('packer').startup(function(use)
 
 	use 'wbthomason/packer.nvim'
 
-	-- My plugins here
+	-- My plugins here 
+    use 'neovim/nvim-lspconfig'
+	use 'ray-x/go.nvim'
+	use 'ray-x/guihua.lua' -- recommanded if need floating window support
+
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -21,8 +25,6 @@ return require('packer').startup(function(use)
 		},
 	}
 
-	-- use "lukas-reineke/lsp-format.nvim"
-
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
@@ -30,11 +32,8 @@ return require('packer').startup(function(use)
 
 	use {
 		'nvim-treesitter/nvim-treesitter',
---		run = ':TSUpdate'
 	}
 
-	use 'ray-x/go.nvim'
-	use 'ray-x/guihua.lua' -- recommanded if need floating window support
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
