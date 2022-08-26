@@ -3,7 +3,7 @@ require'nvim-tree'.setup {
     sort_by = 'name',
 	open_on_setup = true,
     view = {
-        adaptive_size = false,
+        adaptive_size = true,
         centralize_selection = false,
         width = 30,
         height = 30,
@@ -28,5 +28,14 @@ require'nvim-tree'.setup {
 			},
 		},
 	},
+    git = {
+        enable = true,
+        show_on_dirs = true,
+    },
+    actions = {
+        open_file = {
+            resize_window = false
+        }
+    }
 }
 
