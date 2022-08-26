@@ -10,3 +10,6 @@ set.expandtab = true
 set.number = true
 -- set.relativenumber = false
 
+-- set to true for bufferline...
+set.termguicolors = false
+
