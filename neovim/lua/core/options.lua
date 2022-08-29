@@ -13,3 +13,5 @@ set.number = true
 -- set to true for bufferline...
 set.termguicolors = false
 
+set.mouse = 'a'
+
