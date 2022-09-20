@@ -2,7 +2,7 @@ local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
 	packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-	vim.cmd [[packadd packer.nvim]]
+	vim.cmd([[packadd packer.nvim]])
 end
 
 return require('packer').startup(function(use)
@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
 	-- My plugins here 
 	use 'ray-x/go.nvim'
 	use 'ray-x/guihua.lua' -- recommanded if need floating window support
+    use 'lewis6991/gitsigns.nvim'
 
     use {
         "williamboman/nvim-lsp-installer",
@@ -42,6 +43,7 @@ return require('packer').startup(function(use)
         'akinsho/bufferline.nvim', tag = "v2.*", 
         requires = 'kyazdani42/nvim-web-devicons'
     }
+
 
 
 	-- Automatically set up your configuration after cloning packer.nvim

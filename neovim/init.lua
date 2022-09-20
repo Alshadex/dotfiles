@@ -18,4 +18,5 @@ require('plugins/nvim-treesitter-config')
 require('plugins/nvim-lspconfig')
 require('plugins/nvim-lsp-installer')
 require('plugins/buffer-line-config')
+require('plugins/gitsigns-config')
 
