@@ -10,9 +10,13 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- My plugins here 
-    use 'neovim/nvim-lspconfig'
 	use 'ray-x/go.nvim'
 	use 'ray-x/guihua.lua' -- recommanded if need floating window support
+
+    use {
+        "williamboman/nvim-lsp-installer",
+        "neovim/nvim-lspconfig",
+    }
 
 	use {
 		'nvim-lualine/lualine.nvim',
