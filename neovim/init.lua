@@ -16,7 +16,7 @@ require('plugins/telescope-config')
 require('plugins/go-nvim-config')
 require('plugins/nvim-treesitter-config')
 require('plugins/nvim-lspconfig')
-require('plugins/nvim-lsp-installer')
+require('plugins/mason-nvim')
 require('plugins/buffer-line-config')
 require('plugins/gitsigns-config')
 

@@ -34,10 +34,49 @@ end
 
 
 local nvim_lsp = require('lspconfig')
-local servers = { 'pyright', 'gopls', 'bashls', 'dockerls' }
+local servers = { 'pyright',
+                  'gopls', 
+                  'bashls', 
+                  'sumneko_lua',
+                  'dockerls'}
+local settings = {}
 
 for _, lsp in ipairs(servers) do
+    if lsp == 'pyright' then
+        settings = {
+            python = {
+                analysis = {
+                    autoSearchPaths = true,
+                    diagnosticMode = "workspace",
+                    useLibraryCodeForTypes = true
+                }
+            }
+        }
+    elseif lsp == 'sumneko_lua' then
+        settings = {
+            Lua = {
+              runtime = {
+                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+                version = 'LuaJIT',
+              },
+              diagnostics = {
+                -- Get the language server to recognize the `vim` global
+                globals = {'vim'},
+              },
+              workspace = {
+                -- Make the server aware of Neovim runtime files
+                library = vim.api.nvim_get_runtime_file("", true),
+              },
+              -- Do not send telemetry data containing a randomized but unique identifier
+              telemetry = {
+                enable = false,
+              },
+            },
+        }
+    end
+
     nvim_lsp[lsp].setup {
-        on_attach = on_attach
+        on_attach = on_attach,
+        setings = settings
     }
 end
