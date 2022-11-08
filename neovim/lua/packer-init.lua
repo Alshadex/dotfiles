@@ -14,7 +14,6 @@ return require('packer').startup(function(use)
 	use 'ray-x/guihua.lua' -- recommanded if need floating window support
     use 'lewis6991/gitsigns.nvim'
 
-    use 'hrsh7th/nvim-com'
     use {
         "williamboman/mason.nvim",
         "neovim/nvim-lspconfig",
