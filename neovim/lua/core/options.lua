@@ -15,3 +15,4 @@ set.termguicolors = false
 
 set.mouse = 'a'
 
+-- vim.cmd[[colorscheme tokyonight]]
