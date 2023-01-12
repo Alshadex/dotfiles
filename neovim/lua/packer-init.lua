@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
 	use 'ray-x/go.nvim'
 	use 'ray-x/guihua.lua' -- recommanded if need floating window support
     use 'lewis6991/gitsigns.nvim'
+    use "terrortylor/nvim-comment"
 
     use {
         "williamboman/mason.nvim",
@@ -42,6 +43,10 @@ return require('packer').startup(function(use)
     use {
         'akinsho/bufferline.nvim', tag = "v2.*", 
         requires = 'kyazdani42/nvim-web-devicons'
+    }
+
+    use {
+        'johnfrankmorgan/whitespace.nvim',
     }
 
 

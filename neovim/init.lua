@@ -19,4 +19,5 @@ require('plugins/nvim-lspconfig')
 require('plugins/mason-nvim')
 require('plugins/buffer-line-config')
 require('plugins/gitsigns-config')
-
+require('plugins/nvim-comment-config')
+require('plugins/whitespace-nvim-config')

@@ -7,8 +7,8 @@ keymap('n', '<F6>', ':NvimTreeToggle<CR>', opts)
 -- Resize with arrows
 keymap('n', '<C-Up>', ':resize -1<CR>', opts)
 keymap('n', '<C-Down>', ':resize +1<CR>', opts)
-keymap('n', '<C-Left>', ':vertical resize +2<CR>', opts)
-keymap('n', '<C-Right>', ':vertical resize -2<CR>', opts)
+keymap('n', '<C-Right>', ':vertical resize +2<CR>', opts)
+keymap('n', '<C-Left>', ':vertical resize -2<CR>', opts)
 
 -- Focus to different windows
 keymap('n', '<C-h>', '<C-w>h', opts)
