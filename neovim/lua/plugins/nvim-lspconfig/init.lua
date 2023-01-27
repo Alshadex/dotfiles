@@ -35,8 +35,8 @@ end
 
 local nvim_lsp = require('lspconfig')
 local servers = { 'pyright',
-                  'gopls', 
-                  'bashls', 
+                  'gopls',
+                  'bashls',
                   'sumneko_lua',
                   'dockerls'}
 local settings = {}
