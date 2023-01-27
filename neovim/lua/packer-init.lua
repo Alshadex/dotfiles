@@ -8,9 +8,7 @@ end
 return require('packer').startup(function(use)
 
 	use 'wbthomason/packer.nvim'
-
-	-- My plugins here 
-	use 'ray-x/go.nvim'
+    use 'ray-x/go.nvim'
 	use 'ray-x/guihua.lua' -- recommanded if need floating window support
     use 'lewis6991/gitsigns.nvim'
     use "terrortylor/nvim-comment"
