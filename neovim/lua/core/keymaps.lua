@@ -16,6 +16,11 @@ keymap('n', '<C-j>', '<C-w>j', opts)
 keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
+
+keymap('n', '<Leader>g', ':lua copilot.toggle()<CR>', {noremap = true})
+
+
+-- Supposed to be for swapping lines, not finished.
 --keymap('v', '<A-j>', ":m .+1<CR>==", opts)
 --keymap('v', '<A-k>', ":m .-2<CR>==", opts)
 
