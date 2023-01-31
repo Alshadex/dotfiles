@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     use "terrortylor/nvim-comment"
     use 'folke/tokyonight.nvim'
-    use { 'github/copilot.vim', branch = 'release' }
+    use { 'github/copilot.vim' }
 
     use {
         "williamboman/mason.nvim",

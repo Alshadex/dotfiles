@@ -1,2 +1,3 @@
-local copilot = require('copilot')
-copilot.enable()
+
+vim.g.copilot_filetypes = { xml = false }
+
