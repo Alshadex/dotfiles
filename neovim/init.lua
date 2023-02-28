@@ -10,18 +10,24 @@ require('packer-init')
 require('core/options')
 require('core/keymaps')
 
+require('plugins/tokyonight-config')
+
 require('plugins/buffer-line-config')
 require('plugins/gitsigns-config')
-require('plugins/go-nvim-config')
-require('plugins/guihua-config')
 require('plugins/lualine-config')
-require('plugins/lsp-zero-config')
-require('plugins/mason-nvim')
-require('plugins/nvim-comment-config')
--- require('plugins/nvim-lspconfig')
 require('plugins/nvim-tree-config')
 require('plugins/nvim-treesitter-config')
+
+require('plugins/mason-nvim')
+
+require('plugins/go-nvim-config')
+require('plugins/guihua-config')
+
+require('plugins/nvim-comment-config')
 require('plugins/telescope-config')
-require('plugins/tokyonight-config')
 require('plugins/whitespace-nvim-config')
-require('plugins/copilot-config')
+
+-- require('plugins/nvim-lspconfig')
+-- require('plugins/copilot-config')
+require('plugins/copilot-lua-config')
+require('plugins/lsp-zero-config')

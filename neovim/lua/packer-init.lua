@@ -13,7 +13,8 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     use "terrortylor/nvim-comment"
     use 'folke/tokyonight.nvim'
-    use { 'github/copilot.vim' }
+    use "zbirenbaum/copilot.lua"
+    -- use { 'github/copilot.vim' }
 
     use {
         'VonHeikemen/lsp-zero.nvim',

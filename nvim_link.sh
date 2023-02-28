@@ -11,7 +11,7 @@ if [ -d "$NVIM_CONFIG_DIR" ]; then
         rm -r $NVIM_CONFIG_DIR
     else
         exit 1
-    fi 
+    fi
 fi
 
 ln -s ${SCRIPT_DIR}/neovim $NVIM_CONFIG_DIR

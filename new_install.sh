@@ -9,7 +9,7 @@ sudo snap install discord spotify
 sudo snap install vlc
 # installs nvim 0.6 with lua support
 # sudo snap install --beta nvim --classic
-sudo snap install code --classic 
+sudo snap install code --classic
 sudo snap install slack --classic
 sudo snap install node
 sudo snap remove firefox # snap firefox does not work with browserpass :/

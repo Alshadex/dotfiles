@@ -1,5 +1,17 @@
-local lsp = require('lsp-zero')
-lsp.preset('recommended')
+-- local lsp = require('lsp-zero')
+-- lsp.preset('recommended')
+
+-- (Optional) Configure lua language server for neovim
+--lsp.nvim_workspace()
+
+-- lsp.setup()
+
+local lsp = require('lsp-zero').preset({
+  name = 'recommended',
+  set_lsp_keymaps = false,
+  manage_nvim_cmp = true,
+  suggest_lsp_servers = true,
+})
 
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
