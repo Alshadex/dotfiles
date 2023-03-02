@@ -13,8 +13,6 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     use "terrortylor/nvim-comment"
     use 'folke/tokyonight.nvim'
-    use "zbirenbaum/copilot.lua"
-    -- use { 'github/copilot.vim' }
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -32,12 +30,25 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-path'},         -- Optional
             {'saadparwaiz1/cmp_luasnip'}, -- Optional
             {'hrsh7th/cmp-nvim-lua'},     -- Optional
+            -- {"zbirenbaum/copilot.lua"},
+            -- use { 'github/copilot.vim' }
+            -- {"zbirenbaum/copilot-cmp"},
 
             -- Snippets
             {'L3MON4D3/LuaSnip'},             -- Required
             {'rafamadriz/friendly-snippets'}, -- Optional
         }
     }
+
+    -- use 'zbirenbaum/copilot.lua'
+    use 'github/copilot.vim'
+    -- use {
+    --     "zbirenbaum/copilot-cmp",
+    --     after = { "copilot.lua" },
+    --     config = function ()
+    --         require("copilot_cmp").setup()
+    --     end
+    -- }
 
 	use {
 		'nvim-lualine/lualine.nvim',

@@ -28,6 +28,6 @@ require('plugins/telescope-config')
 require('plugins/whitespace-nvim-config')
 
 -- require('plugins/nvim-lspconfig')
--- require('plugins/copilot-config')
-require('plugins/copilot-lua-config')
+-- require('plugins/copilot-lua-config')
+require('plugins/copilot-config')
 require('plugins/lsp-zero-config')
