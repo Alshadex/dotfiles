@@ -13,7 +13,6 @@ lsp.setup_nvim_cmp({
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<Tab>'] = vim.NIL,
     ['<S-Tab>'] = vim.NIL,
-    ['<CR>'] = vim.NIL,
   })
 })
 
