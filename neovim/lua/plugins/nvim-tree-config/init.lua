@@ -1,4 +1,4 @@
-require'nvim-tree'.setup {
+require("nvim-tree").setup({
     auto_reload_on_write = true,
     sort_by = 'name',
     open_on_setup = true,
@@ -36,5 +36,5 @@ require'nvim-tree'.setup {
             resize_window = false
         }
     }
-}
+})
 
