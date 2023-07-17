@@ -55,15 +55,19 @@ return require('packer').startup(function(use)
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
-	use {
-		'kyazdani42/nvim-tree.lua',
-		requires = {'kyazdani42/nvim-web-devicons', -- optional, for file icon
-		},
-	}
+	-- use {
+	-- 	'kyazdani42/nvim-tree.lua',
+	-- 	requires = {'kyazdani42/nvim-web-devicons', -- optional, for file icon
+	-- 	},
+	-- }
 
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = {
+            {'nvim-lua/plenary.nvim'},
+            {'BurntSushi/ripgrep'},
+            {'sharkdp/fd'}
+        }
 	}
 
 	use {

@@ -15,7 +15,7 @@ require('plugins/tokyonight-config')
 require('plugins/buffer-line-config')
 require('plugins/gitsigns-config')
 require('plugins/lualine-config')
-require('plugins/nvim-tree-config')
+-- require('plugins/nvim-tree-config')
 require('plugins/nvim-treesitter-config')
 
 require('plugins/mason-nvim')
