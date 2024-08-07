@@ -1,15 +1,24 @@
 #!/bin/bash
 
+webhookUrl="https://discord.com/api/webhooks/1202994608293023786/RpyS-ctKJlHM2rnAuUlcGe1eYSG67zRih1tPzD0nh9Rp4w3h2XeFRz7WvUAC1oP6sdL1"
+currentIPFile="/root/currentIP"
 
-newIP=$(curl ifconfig.co)
-oldIP=$(head -n 1 /home/pi/bin/currentIP)
-echo $newIP
-echo $oldIP
-if [[ $oldIP != $newIP ]]
+newIP=$(curl -s4 icanhazip.com)
+
+if [ -z $newIP ]; then
+    exit 1
+fi
+
+if [ ! -e $currentIPFile ]; then
+    touch $currentIPFile
+    echo $newIP > $currentIPFile
+fi
+
+oldIP=$(head -n 1 $currentIPFile)
+
+if [[ $oldIP != $newIP ]];
 then
-	echo "IP Address Changed. Notifying..."
-	echo "Writing new IP address to file"
-	echo $newIP > /home/pi/bin/currentIP
-	echo "Copying new IP to dh2026pc01.utm.utoronto.ca"
-	scp /home/pi/bin/currentIP linalex7@dh2026pc01.utm.utoronto.ca:/student/linalex7/bin/
+        content="Athena Public Ipv4 updated to ${newIP} from ${oldIP}"
+        curl -X POST -H 'Content-type: application/json' -d "{\"content\": \"$content\"}" ${webhookUrl}
+        echo $newIP > $currentIPFile
 fi
