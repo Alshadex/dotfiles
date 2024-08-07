@@ -40,15 +40,7 @@ return require('packer').startup(function(use)
         }
     }
 
-    -- use 'zbirenbaum/copilot.lua'
     use 'github/copilot.vim'
-    -- use {
-    --     "zbirenbaum/copilot-cmp",
-    --     after = { "copilot.lua" },
-    --     config = function ()
-    --         require("copilot_cmp").setup()
-    --     end
-    -- }
 
 	use {
 		'nvim-lualine/lualine.nvim',
@@ -75,14 +67,12 @@ return require('packer').startup(function(use)
 	}
 
     use {
-        'akinsho/bufferline.nvim', tag = "v2.*", 
-        requires = 'kyazdani42/nvim-web-devicons'
-    }
-
-    use {
         'johnfrankmorgan/whitespace.nvim',
     }
 
+    use {
+        "FabijanZulj/blame.nvim"
+    }
 
 
 	-- Automatically set up your configuration after cloning packer.nvim
