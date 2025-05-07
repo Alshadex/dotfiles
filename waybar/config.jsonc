@@ -23,10 +23,11 @@
         "format": "{icon}: {windows} ",
         "window-rewrite-default": "",
         "window-rewrite": {
-            "title<.*youtube.*>": "",
             "kitty": "",
             "code": "󰨞",
-            "discord": ""
+            "discord": "",
+            "brave": "",
+            "firefox": ""
         }
     },
     "clock": {
