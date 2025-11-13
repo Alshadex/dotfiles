@@ -22,8 +22,5 @@ set.incsearch = true
 
 set.scrolloff = 8
 
--- Tokyonight colorscheme options
-vim.cmd[[colorscheme tokyonight]]
-
 -- lsp-zero options
 set.updatetime = 800

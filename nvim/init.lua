@@ -3,32 +3,19 @@ Neovim init file
 Maintainer: Alex Lin
 --]]
 
--- packer init
-require('packer-init')
+-- Helper function to safely load modules
+local function safe_require(module)
+    local ok, err = pcall(require, module)
+    if not ok then
+        vim.notify('Failed to load ' .. module .. ': ' .. tostring(err), vim.log.levels.ERROR)
+        return false
+    end
+    return true
+end
 
--- modules
-require('core/options')
-require('core/keymaps')
+-- Load core configuration
+safe_require('core/options')
+safe_require('core/keymaps')
 
-require('plugins/tokyonight-config')
-
--- require('plugins/buffer-line-config')
-require('plugins/gitsigns-config')
-require('plugins/lualine-config')
-require('plugins/nvim-tree-config')
-require('plugins/nvim-treesitter-config')
-
-require('plugins/mason-nvim')
-
-require('plugins/go-nvim-config')
-require('plugins/guihua-config')
-
-require('plugins/nvim-comment-config')
-require('plugins/telescope-config')
-require('plugins/whitespace-nvim-config')
-
--- require('plugins/nvim-lspconfig')
--- require('plugins/copilot-lua-config')
-require('plugins/copilot-config')
-require('plugins/lsp-zero-config')
-require('plugins/blame-nvim-config')
+-- Initialize lazy.nvim plugin manager
+safe_require('lazy-init')

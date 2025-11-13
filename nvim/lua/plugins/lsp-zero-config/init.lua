@@ -80,8 +80,18 @@ cmp.setup({
     -- toggle completion menu
     ['<C-e>'] = cmp_action.toggle_completion(),
 
-    -- tab complete
-    ['<Tab>'] = cmp_action.tab_complete(),
+    -- tab complete with Copilot priority
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      local copilot_suggestion = vim.fn['copilot#GetDisplayedSuggestion']()
+      if copilot_suggestion.text ~= nil and copilot_suggestion.text ~= '' then
+        vim.api.nvim_feedkeys(vim.fn['copilot#Accept'](''), 'n', true)
+      elseif cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end, {'i', 's'}),
+
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
     -- navigate between snippet placeholder
