@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+WALLPAPER_DIR="$HOME/Documents/desktop"
+
+next_wallpaper() {
+  img=$(find "$WALLPAPER_DIR" -type f \( -name '*.jpg' -o -name '*.png' \) | shuf -n1)
+  awww img "$img" --transition-type random
+}
+
+skip() {
+  next_wallpaper
+  sleep 3600 &
+  SLEEP_PID=$!
+}
+
+trap 'kill $SLEEP_PID 2>/dev/null; skip' SIGUSR1
+
+awww-daemon &
+sleep 1
+next_wallpaper
+
+while true; do
+  sleep 3600 &
+  SLEEP_PID=$!
+  wait $SLEEP_PID
+  next_wallpaper
+done

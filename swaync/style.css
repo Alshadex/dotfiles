@@ -1,0 +1,190 @@
+/* Catppuccin Mocha */
+/* Base: #1e1e2e  Mantle: #181825  Crust: #11111b  */
+/* Text: #cdd6f4  Subtext0: #a6adc8  Overlay0: #6c7086 */
+/* Mauve: #cba6f7  Blue: #89b4fa  Green: #a6e3a1     */
+/* Red: #f38ba8  Peach: #fab387  Yellow: #f9e2af     */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+}
+
+/* ── Notification popups ───────────────────────────── */
+
+.notification-row {
+    outline: none;
+    margin: 6px 0;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+    opacity: 1;
+}
+
+.notification {
+    background: rgba(30, 30, 46, 0.92);
+    border: 1px solid rgba(108, 112, 134, 0.35);
+    border-radius: 12px;
+    padding: 0;
+    margin: 6px 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.notification-content {
+    padding: 12px 14px;
+    border-radius: 12px;
+}
+
+.notification-default-action {
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+    background: transparent;
+}
+
+.notification-default-action:hover {
+    background: rgba(203, 166, 247, 0.06);
+}
+
+.notification-default-action:not(:only-child) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.close-button {
+    background: rgba(243, 139, 168, 0.15);
+    color: #f38ba8;
+    border-radius: 6px;
+    border: none;
+    padding: 2px 6px;
+    min-width: 0;
+    min-height: 0;
+    margin: 6px;
+}
+
+.close-button:hover {
+    background: rgba(243, 139, 168, 0.3);
+}
+
+.notification-action {
+    background: rgba(137, 180, 250, 0.1);
+    color: #89b4fa;
+    border: none;
+    border-top: 1px solid rgba(108, 112, 134, 0.25);
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.notification-action:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.notification-action:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+.notification-action:hover {
+    background: rgba(137, 180, 250, 0.2);
+}
+
+.summary {
+    color: #cdd6f4;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.time {
+    color: #6c7086;
+    font-size: 11px;
+    margin-right: 4px;
+}
+
+.body {
+    color: #a6adc8;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+image.icon {
+    margin-right: 10px;
+}
+
+.urgency-low {
+    border-left: 3px solid #a6e3a1;
+}
+
+.urgency-normal {
+    border-left: 3px solid #89b4fa;
+}
+
+.urgency-critical {
+    border-left: 3px solid #f38ba8;
+    animation: shake 0.5s ease-in-out;
+}
+
+/* ── Control center panel ──────────────────────────── */
+
+.control-center {
+    background: rgba(24, 24, 37, 0.95);
+    border: 1px solid rgba(108, 112, 134, 0.3);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.control-center-list-placeholder {
+    color: #6c7086;
+    font-size: 12px;
+}
+
+.floating-notifications {
+    background: transparent;
+}
+
+/* ── Do Not Disturb ────────────────────────────────── */
+
+.widget-dnd {
+    color: #cdd6f4;
+    background: transparent;
+    padding: 6px 4px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.widget-dnd > switch {
+    background: rgba(108, 112, 134, 0.3);
+    border: none;
+    border-radius: 14px;
+}
+
+.widget-dnd > switch:checked {
+    background: rgba(203, 166, 247, 0.6);
+}
+
+.widget-dnd > switch slider {
+    background: #cdd6f4;
+    border-radius: 50%;
+    min-width: 18px;
+    min-height: 18px;
+    margin: 2px;
+}
+
+/* ── Clear all button ──────────────────────────────── */
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background: rgba(137, 180, 250, 0.1);
+    color: #89b4fa;
+    border: 1px solid rgba(137, 180, 250, 0.2);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: rgba(137, 180, 250, 0.2);
+}

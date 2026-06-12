@@ -1,0 +1,32 @@
+#!/bin/bash
+# Toggles system-wide dark/light mode.
+# On Hyprland (no GNOME settings daemon), we write gtk-{3,4}.0/settings.ini
+# directly in addition to gsettings/dconf so running GTK apps pick up the change.
+
+CURRENT=$(gsettings get org.gnome.desktop.interface color-scheme)
+
+mkdir -p ~/.config/gtk-3.0 ~/.config/gtk-4.0
+
+if [[ "$CURRENT" == "'prefer-dark'" ]]; then
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
+
+    printf '[Settings]\ngtk-application-prefer-dark-theme=0\ngtk-theme-name=Adwaita\n' \
+        > ~/.config/gtk-3.0/settings.ini
+    printf '[Settings]\n' \
+        > ~/.config/gtk-4.0/settings.ini
+
+    notify-send -i display-brightness-symbolic "Theme" "Light mode" 2>/dev/null || true
+else
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
+
+    printf '[Settings]\ngtk-application-prefer-dark-theme=1\ngtk-theme-name=Adwaita\n' \
+        > ~/.config/gtk-3.0/settings.ini
+    printf '[Settings]\n' \
+        > ~/.config/gtk-4.0/settings.ini
+
+    notify-send -i display-brightness-symbolic "Theme" "Dark mode" 2>/dev/null || true
+fi
+
+pkill -RTMIN+8 waybar 2>/dev/null || true
